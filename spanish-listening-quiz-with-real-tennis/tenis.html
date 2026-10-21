@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo de Tenis</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<div class="brand">
+<span class="dot"></span>
+<h1>Equipo de Tenis</h1>
+<a class="tagline" href="index.html">← back to practice</a>
+</div>
+<h2 class="hero-word small">Escucha y aprende</h2>
+<p class="home-copy">
+Player A asks, Player B answers. <b>Listen &amp; learn</b> plays both;
+<b>Práctica solo</b> plays the question and you answer out loud before hearing the reply.
+<a href="tenis-record.html">Record players →</a>
+</p>
+<fieldset>
+<legend>Mode</legend>
+<select id="mode" class="set-select">
+<option value="listen">Listen &amp; learn (question, then response)</option>
+<option value="solo">Práctica solo (question only, you answer)</option>
+</select>
+</fieldset>
+<fieldset>
+<legend>Set</legend>
+<select id="set-select" class="set-select"></select>
+</fieldset>
+<fieldset>
+<legend>Players</legend>
+<select id="pq" class="set-select"></select>
+<select id="pa" class="set-select"></select>
+<p class="rec-progress">First = asks the question. Second = gives the response.</p>
+</fieldset>
+<fieldset>
+<legend>Advance</legend>
+<select id="adv" class="set-select">
+<option value="delay">After a delay</option>
+<option value="space">When I press the space bar</option>
+</select>
+<input id="delay" class="set-select" type="number" min="0.5" step="0.5" value="2" aria-label="Delay in seconds">
+<label><input type="checkbox" id="show" checked> Show text</label>
+</fieldset>
+<div class="rec-panel">
+<p class="rec-label" id="q-text">–</p>
+<p class="rec-spoken" id="a-text"></p>
+<div class="home-actions">
+<button class="start-btn" id="go-btn">Start</button>
+<button class="study-btn" id="next-btn" disabled>Next (space)</button>
+</div>
+<p class="feedback-row" id="msg"></p>
+</div>
+<p class="hint-note">Recordings from this browser are used first; otherwise published files under audio/tenis/ are used.</p>
+</div>
+<script src="js/store.js"></script>
+<script src="js/tenis-common.js"></script>
+<script src="js/tenis.js"></script>
+</body>
+</html>

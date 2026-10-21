@@ -1,0 +1,30 @@
+{
+  "id": "numbers",
+  "title": "Numbers",
+  "instructions": "Listen to the number and choose the matching digit.",
+  "audioPath": "audio/numbers/",
+  "fallbackLang": "es-ES",
+  "items": [
+    { "id": "0", "label": "0", "spoken": "cero", "confuseGroup": [] },
+    { "id": "1", "label": "1", "spoken": "uno", "confuseGroup": [] },
+    { "id": "2", "label": "2", "spoken": "dos", "confuseGroup": ["12"] },
+    { "id": "3", "label": "3", "spoken": "tres", "confuseGroup": ["13"] },
+    { "id": "4", "label": "4", "spoken": "cuatro", "confuseGroup": ["14"] },
+    { "id": "5", "label": "5", "spoken": "cinco", "confuseGroup": ["15"] },
+    { "id": "6", "label": "6", "spoken": "seis", "confuseGroup": ["7", "16"] },
+    { "id": "7", "label": "7", "spoken": "siete", "confuseGroup": ["6", "17"] },
+    { "id": "8", "label": "8", "spoken": "ocho", "confuseGroup": ["18"] },
+    { "id": "9", "label": "9", "spoken": "nueve", "confuseGroup": ["19"] },
+    { "id": "10", "label": "10", "spoken": "diez", "confuseGroup": [] },
+    { "id": "11", "label": "11", "spoken": "once", "confuseGroup": [] },
+    { "id": "12", "label": "12", "spoken": "doce", "confuseGroup": ["2"] },
+    { "id": "13", "label": "13", "spoken": "trece", "confuseGroup": ["3"] },
+    { "id": "14", "label": "14", "spoken": "catorce", "confuseGroup": ["4"] },
+    { "id": "15", "label": "15", "spoken": "quince", "confuseGroup": ["5"] },
+    { "id": "16", "label": "16", "spoken": "dieciséis", "confuseGroup": ["6", "17"] },
+    { "id": "17", "label": "17", "spoken": "diecisiete", "confuseGroup": ["7", "16"] },
+    { "id": "18", "label": "18", "spoken": "dieciocho", "confuseGroup": ["8"] },
+    { "id": "19", "label": "19", "spoken": "diecinueve", "confuseGroup": ["9"] },
+    { "id": "20", "label": "20", "spoken": "veinte", "confuseGroup": [] }
+  ]
+}
