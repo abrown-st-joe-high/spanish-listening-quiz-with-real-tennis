@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo de Tenis · Record</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<div class="brand">
+<span class="dot"></span>
+<h1>Equipo de Tenis</h1>
+<a class="tagline" href="index.html">← back to practice</a>
+</div>
+<h2 class="hero-word small">Record a player</h2>
+<p class="home-copy">
+Enter the player's name and ID, pick a verb set, then record every question and response.
+Two players = two IDs. Recordings are saved per player in this browser.
+</p>
+<fieldset>
+<legend>Player</legend>
+<input id="p-name" class="set-select" placeholder="Name (e.g. Ana)">
+<input id="p-id" class="set-select" placeholder="ID (e.g. ana01)" list="p-list">
+<datalist id="p-list"></datalist>
+<button class="study-btn" id="use-btn">Use this player</button>
+</fieldset>
+<fieldset>
+<legend>Set</legend>
+<select id="set-select" class="set-select"></select>
+</fieldset>
+<div class="rec-panel">
+<p class="rec-label" id="rec-label">–</p>
+<p class="rec-spoken" id="rec-spoken"></p>
+<div class="home-actions">
+<button class="start-btn" id="rec-btn">Record</button>
+<button class="study-btn" id="play-btn" disabled>Play</button>
+<button class="study-btn" id="del-btn" disabled>Delete</button>
+</div>
+<button class="study-btn block" id="next-btn">Next unrecorded</button>
+<p class="rec-progress">Tip: press the → arrow key to move to the next item.</p>
+<p class="feedback-row" id="rec-status"></p>
+</div>
+<p class="rec-progress" id="rec-progress"></p>
+<div class="listen-grid tenis-grid" id="item-grid"></div>
+<div class="home-actions spaced-top">
+<button class="start-btn" id="zip-btn">Download all as ZIP</button>
+<button class="study-btn" id="clear-btn">Clear local</button>
+</div>
+<p class="hint-note">
+The ZIP holds <b>audio/tenis/&lt;id&gt;/…</b> files plus <b>audio/tenis/players.json</b>.
+Unzip into the repository root and commit. If two players recorded on different devices,
+merge their entries into one players.json. Microphone access needs https or localhost.
+</p>
+</div>
+<script src="js/store.js"></script>
+<script src="js/zip.js"></script>
+<script src="js/tenis-common.js"></script>
+<script src="js/tenis-record.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oído · Spanish Listening Practice</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <div class="brand">
+    <span class="dot"></span>
+    <h1>Oído</h1>
+    <span class="tagline">listening practice</span>
+  </div>
+
+  <!-- HOME -->
+  <section id="screen-home" class="screen active">
+    <h2 class="hero-word">Train the <em>ear</em>, not just the eye.</h2>
+    <p class="home-copy">
+      Each round plays a letter or number out loud. Pick the match from four
+      options. Sets are weighted so easily-confused sounds — g/j/h/y, s/c/z,
+      m/n/ñ — show up as answer choices more often, on purpose.
+    </p>
+
+    <fieldset>
+      <legend>Practice set</legend>
+      <div class="module-list" id="module-list"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Round length</legend>
+      <div class="count-choices" id="count-choices">
+        <button data-count="10">10</button>
+        <button data-count="20">20</button>
+        <button data-count="0">All</button>
+      </div>
+    </fieldset>
+
+    <button class="start-btn" id="start-btn" disabled>Start round</button>
+
+    <fieldset class="more-tools">
+      <legend>More</legend>
+      <div class="module-list">
+        <a class="module-row" href="tenis.html"><span class="m-name">Equipo de Tenis</span><span class="m-count">questions &amp; responses</span></a>
+        <a class="module-row" href="record.html"><span class="m-name">Record sounds</span><span class="m-count">alphabet, numbers</span></a>
+        <a class="module-row" href="tenis-record.html"><span class="m-name">Record tenis players</span><span class="m-count">per player</span></a>
+      </div>
+    </fieldset>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-top">
+      <span id="quiz-progress-label">Question 1 of 10</span>
+      <span id="quiz-score-label">Score 0</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+    <div class="dial">
+      <button class="play-btn" id="play-btn" aria-label="Play sound">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <p class="play-hint" id="play-hint">Tap to hear it again</p>
+    </div>
+
+    <div class="options-grid" id="options-grid"></div>
+
+    <p class="feedback-row" id="feedback-row"></p>
+    <button class="next-btn" id="next-btn">Next question</button>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="screen-results" class="screen">
+    <div class="results-card">
+      <p class="results-label">Round complete</p>
+      <p class="results-score" id="results-score">0/0</p>
+      <p class="results-label" id="results-sub"></p>
+      <div class="miss-list" id="miss-list" style="display:none;">
+        <h3>Worth another listen</h3>
+        <div id="miss-rows"></div>
+      </div>
+    </div>
+    <div class="results-actions">
+      <button class="again-btn" id="again-btn">Practice again</button>
+      <button class="home-btn" id="home-btn">Change set</button>
+    </div>
+  </section>
+
+  <p class="hint-note" id="audio-mode-note"></p>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
