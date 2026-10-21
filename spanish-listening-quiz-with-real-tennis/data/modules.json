@@ -1,0 +1,4 @@
+[
+  { "id": "alphabet", "label": "Alphabet", "dataFile": "data/alphabet.json" },
+  { "id": "numbers", "label": "Numbers", "dataFile": "data/numbers.json" }
+]
