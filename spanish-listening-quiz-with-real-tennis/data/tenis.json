@@ -3,8 +3,5 @@
   "verbs": [
     { "inf": "necesitar", "yo": "necesito", "tú": "necesitas", "él": "necesita", "nosotros": "necesitamos", "ustedes": "necesitan" }
   ],
-  "extra": [
-    { "set": "Frases extra",
-      "pairs": [ { "q": "¿Cómo te llamas?", "a": ["Me llamo Ana", "Me llamo Luis"] } ] }
-  ]
+
 }
