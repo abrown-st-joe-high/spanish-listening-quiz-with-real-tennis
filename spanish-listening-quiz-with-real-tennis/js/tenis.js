@@ -44,6 +44,9 @@ function wait(t, auto) {
   });
 }
 
+const hintOn = () => $("hint").checked;
+const hintOf = (ans) => (ans.text.startsWith("No") ? "No…" : "Sí…"); // tells the listener which way to answer
+
 function pool() {
   const v = $("set-select").value;
   return v === "all" ? sets.flatMap((s) => s.pairs) : sets[+v].pairs;
@@ -62,15 +65,15 @@ async function run() {
     const items = pool();
     const pair = items[(Math.random() * items.length) | 0];
     const ans = pair.as[(Math.random() * pair.as.length) | 0];
-    $("q-text").textContent = solo && !show() ? "…" : show() ? pair.q.text : "…";
-    $("a-text").textContent = "";
+    $("q-text").textContent = show() ? pair.q.text : "…";
+    $("a-text").textContent = hintOn() ? hintOf(ans) : "";
     msg.textContent = "";
     if (!(await Tenis.play(qp, pair.q)) && t === token) msg.textContent = `No recording for “${pair.q.text}” from ${qp}.`;
     if (t !== token) return;
     msg.textContent = solo ? "Your turn: answer out loud, then press space." : msg.textContent;
     await wait(t, solo ? false : auto);
     if (t !== token) return;
-    $("a-text").textContent = show() ? ans.text : "";
+    $("a-text").textContent = show() ? ans.text : hintOn() ? hintOf(ans) : "";
     msg.textContent = "";
     if (!(await Tenis.play(ap, ans)) && t === token) msg.textContent = `No recording for “${ans.text}” from ${ap}.`;
     if (t !== token) return;
